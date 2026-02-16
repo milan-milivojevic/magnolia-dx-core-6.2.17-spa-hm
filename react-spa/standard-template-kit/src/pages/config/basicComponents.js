@@ -3,17 +3,16 @@ import { EditableArea } from '@magnolia/react-editor';
 import '../../css.css';
 
 function BasicComponentsConfiguration (props) {
-  const { 
+  const {
     audioComponents,
     dividerComponents,
     iframeComponents,
     imageComponents,
-    linkComponents, 
+    linkComponents,
     separationBlockComponents,
-    spacerComponents,   
+    spacerComponents,
     textComponents,
     videoComponents,
-    // youtubeComponents 
   } = props;
 
   return (
@@ -21,7 +20,7 @@ function BasicComponentsConfiguration (props) {
       <h2 className='titles'>Text Components</h2>
       <div>{textComponents && <EditableArea content={textComponents} />}</div>
       <h2 className='titles'>Link Components</h2>
-      <div>{linkComponents && <EditableArea content={linkComponents} />}</div>   
+      <div>{linkComponents && <EditableArea content={linkComponents} />}</div>
       <h2 className='titles'>Image Components</h2>
       <div>{imageComponents && <EditableArea content={imageComponents} />}</div>
       <h2 className='titles'>Video Components</h2>
@@ -36,8 +35,7 @@ function BasicComponentsConfiguration (props) {
       <div>{dividerComponents && <EditableArea content={dividerComponents} />}</div>
       <h2 className='titles'>Separation Block Components</h2>
       <div>{separationBlockComponents && <EditableArea content={separationBlockComponents} />}</div>
-      {/* <h2 className='titles'>Youtube Components</h2>
-      <div>{youtubeComponents && <EditableArea content={youtubeComponents} />}</div> */}
+
     </div>
   );
 }

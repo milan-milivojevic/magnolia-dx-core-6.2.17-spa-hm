@@ -6,13 +6,13 @@ export function isPublicInstance() {
 
   let pathname = window.location.pathname;
   let isTrue;
-  
+
   if (pathname.includes("cmsPublic")) {
     isTrue = true;
   } else {
     isTrue = false;
   }
-  
+
   return isTrue;
 }
 
@@ -23,7 +23,6 @@ export function getAPIBase() {
     } else {
         M = process.env.REACT_APP_MGNL_BASE_PUBLIC;
     }
-    // let API_BASE = process.env.REACT_APP_MGNL_HOST + M;
     return M;
 }
 
