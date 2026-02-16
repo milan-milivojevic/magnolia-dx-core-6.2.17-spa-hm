@@ -41,14 +41,6 @@ function MpCustomSearch ({
 
   const [products, setProducts] = useState([]);
 
-  // const assetIdsArray = [];
-
-  // for (const key in assetsIds) {
-  //   if (key.startsWith('assetsIds')) {
-  //     assetIdsArray.push(assetsIds[key].assetId);
-  //   }
-  // }  
-
   const assetIdsArray = assetIds?.split(',').map(assetId => assetId.trim());
 
   const elasticSearch = async () => {
@@ -71,9 +63,6 @@ function MpCustomSearch ({
     const limit = cardsLimit || searchParams.get('limit') || 25;
     const assetIdsArrayLength = assetIdsArray ? assetIdsArray.length : 0;
     const calculatedLimit = parseInt(limit, 10) > 60 ? 60 : parseInt(limit, 10) - assetIdsArrayLength;
-    console.log("calculatedLimit");
-    console.log(calculatedLimit);
-
     let selectedCategories = [];
     let selectedSuffixes = [];
     let selectedTags = [];
