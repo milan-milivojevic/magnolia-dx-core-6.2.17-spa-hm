@@ -1,0 +1,41 @@
+label: Font Family
+$type: comboBoxField
+datasource:
+  $type: optionListDatasource
+  options:
+    - name: default
+      value: default
+      label: default
+    - name: TitilliumWebRegular
+      value: TitilliumWebRegular
+      label: TitilliumWebRegular
+    - name: TitilliumWebBold
+      value: TitilliumWebBold
+      label: TitilliumWebBold   
+    - name: TitilliumWebSemiBold
+      value: TitilliumWebSemiBold
+      label: TitilliumWebSemiBold
+    - name: TitilliumWebLight
+      value: TitilliumWebLight
+      label: TitilliumWebLight    
+    - name: TitilliumWebExtraLight
+      value: TitilliumWebExtraLight
+      label: TitilliumWebExtraLight
+    - name: TitilliumWebBlack
+      value: TitilliumWebBlack
+      label: TitilliumWebBlack    
+    - name: TitilliumWebItalic
+      value: TitilliumWebItalic
+      label: TitilliumWebItalic
+    - name: TitilliumWebBoldItalic
+      value: TitilliumWebBoldItalic
+      label: TitilliumWebBoldItalic
+    - name: TitilliumWebSemiBoldItalic
+      value: TitilliumWebSemiBoldItalic
+      label: TitilliumWebSemiBoldItalic
+    - name: TitilliumWebLightItalic
+      value: TitilliumWebLightItalic
+      label: TitilliumWebLightItalic
+    - name: TitilliumWebExtraLightItalic
+      value: TitilliumWebExtraLightItalic
+      label: TitilliumWebExtraLightItalic

@@ -1,0 +1,120 @@
+/* .pageContainer {
+    top: 167px;
+    min-height: calc(100vh - 167px);
+} */
+/* header {
+    height: 112px;
+} */
+
+.staticSearch .headerSearch input.searchInput {
+    width: 250px;
+  }
+
+
+.staticSearch {
+    /* align-items: center; */
+    padding: 100px 40px;
+}
+
+.staticSearch mark {
+    background-color: #0e7bba;
+    color: white;
+    padding: 2px;
+}
+  
+.staticSearch .list {
+    padding: 20px;
+    font-size: 20px;
+    list-style: none;
+}
+.staticSearch .page {
+    padding-bottom: 5px;
+}
+.staticSearch .page a {
+    text-decoration: none;
+    color: #0e7bba;
+    font-size: 24px;  
+    display: flex;
+    gap: 15px;  
+}
+.staticSearch .page a svg {
+    width: 24px;
+    height: 24px;
+}
+.staticSearch .title {
+    padding: 20px 10px 10px 10px;
+}
+.staticSearch .description {
+    padding: 0 10px;
+}
+
+/* .topNav {
+    height: 55px;
+    top: 112px;
+} */
+/* .leftHandNav {
+    min-height: calc(100vh - 311px);
+} */
+.leftHandNav > .menus {
+  height: fit-content;
+}
+
+.leftHandNav li button a {
+    width: 242px;
+}
+
+/* Privremeno resenje za LHN internal lvl2 navigation */
+
+/* li.level-1.active > button > a {
+    color: #0e7bba;
+}
+li.level-2.active > button > a {
+    color: #fff;
+}
+li.level-2.active > button > a:hover {
+    color: #0e7bba;
+} */
+
+/* .rightMainContent {
+    min-height: calc(100vh - 311px);
+} */
+
+
+
+.logoSticky {
+  position: sticky;
+  top: 167px;
+  background-color: #f5f5f5;
+}
+
+.editMode .logoSticky {
+  position: unset;
+}
+
+/* p strong {
+    font-family: "Sohne Halbfett";
+} */
+
+
+/* Corporate Icons */
+
+.corporateIcons .divider {
+    border-bottom: 5px solid rgb(154, 154, 156);
+}
+.corporateIcons .title {
+    /* font-family: "Sohne Halbfett"; */
+    font-size: 22px;
+    line-height: 33px;
+    color: rgb(65, 65, 65);
+    padding-top: 20px;
+    font-weight: normal;
+}
+
+.corporateIcons .subtitle {
+    /* font-family: "Sohne Buch"; */
+    font-size: 22px;
+    line-height: 33px;
+    color: rgb(65, 65, 65);    
+    padding-bottom: 40px;
+    font-weight: normal;
+}

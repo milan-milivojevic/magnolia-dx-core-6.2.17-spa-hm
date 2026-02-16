@@ -1,0 +1,26 @@
+{
+    "searchSchemaId": "asset",
+    "lang": null,
+    "output": {
+        "items": {
+            "fields": [
+                "id"
+            ]
+        },
+        "paging": {
+            "@type": "offset",
+            "offset": 0,
+            "limit": 1
+        },
+        "aggregates": {
+            "tags": {
+                "@type": "groups",
+                "field": "keywords_multi",
+                "maxGroups": 0,
+                "orderAsc": false,
+                "orderByGroup": false,
+                "include": ".*\\S+"
+            }
+        }
+    }
+}
