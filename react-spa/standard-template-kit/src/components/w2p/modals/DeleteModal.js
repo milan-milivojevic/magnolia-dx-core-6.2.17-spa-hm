@@ -12,7 +12,6 @@ const DeleteModal = ({ documentId, isOpen, onClose }) => {
     })
     .then(response => {
       if (response.ok) {
-        console.log("Document deleted successfully");
         onClose();
       } else {
         console.error("Failed to delete the document");
