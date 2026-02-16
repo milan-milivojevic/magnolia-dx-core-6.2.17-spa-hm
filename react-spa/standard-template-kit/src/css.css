@@ -130,9 +130,6 @@ body {
   width: calc(100% / 6);
 }
 
-
-
-
 * {
   box-sizing: border-box;
 }
@@ -140,8 +137,6 @@ body {
 p {
   margin: 0;
 }
-
-
 
 .editMode .mgnlEditor {
   display: flex !important;
@@ -151,13 +146,7 @@ p {
   display: block !important;
 }
 
-
-
-
-
-
-
-.configComponentsPage .titles { 
+.configComponentsPage .titles {
   padding: 40px 0;
   text-align: center;
 }
@@ -182,7 +171,7 @@ p {
 }
 
 .copyStyleName h4 {
-  text-align: center;  
+  text-align: center;
   padding: 0 20px 0 0;
   text-transform: none;
 }
@@ -198,13 +187,6 @@ p {
 display: flex;
 flex-direction: column;
 }
-
-
-
-
-
-
-
 
 .corporateIcons .iconsWrapper {
   display: flex;
@@ -259,19 +241,10 @@ flex-direction: column;
   width: 250px;
 }
 
-/* a, figcaption {
-  font-family: 'Sohne Buch';
-} */
-
 a.link svg {
   margin-left: 20px;
 }
 
-
-
 .linkComponent {
   min-width: fit-content;
 }
-
-
-

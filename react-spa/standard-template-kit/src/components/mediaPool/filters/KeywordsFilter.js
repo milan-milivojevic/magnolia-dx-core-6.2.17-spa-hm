@@ -15,7 +15,6 @@ export default function KeywordsFilter({onUpdateSelectedKeywords, selectedKeywor
 
   const baseUrl = process.env.REACT_APP_MGNL_HOST_NEW; 
 
-  /* Dohvatanje Filtera */
   useEffect(() => {
     const requestOptions = {
       method: 'POST',
@@ -27,7 +26,6 @@ export default function KeywordsFilter({onUpdateSelectedKeywords, selectedKeywor
       .then((response) => response.json())
       .then((data) => {
       const countData = data;
-        // Store the countResponseData and fetch the keywords
         return { countData, fetchPromise: fetch(`${baseUrl}/rest/mp/v1.2/keywords`) };
       })
       .then(async ({ countData, fetchPromise }) => {
@@ -38,8 +36,6 @@ export default function KeywordsFilter({onUpdateSelectedKeywords, selectedKeywor
       .then(({ keywordsData, countData }) => {
         const countGroups = countData?.aggregations.keywords.aggs.id.subGroups;
         const transformedParents = mapData(keywordsData.items, countGroups);
-        console.log("transformedParents");
-        console.log(transformedParents);
         setParents(transformedParents);
         setInitialParents(transformedParents);
       })
@@ -54,14 +50,12 @@ export default function KeywordsFilter({onUpdateSelectedKeywords, selectedKeywor
         id: item.id,
         label: item.name.EN || item.name.DE,
         value: item.id.toString(),
-        count: 0, // default count
-        isChecked: selectedKeywords?.includes(item.id.toString()) // Check if the ID exists in the selectedKeywords
+        count: 0,
+        isChecked: selectedKeywords?.includes(item.id.toString())
       };
   
-      // Find the matching group from the POST request response
       const matchingGroup = countGroups?.find(group => parseInt(group.group) === item.id);
       
-      // If a matching group is found, update the count
       if (matchingGroup) {
         mappedItem.count = matchingGroup.count;
       }
@@ -69,7 +63,6 @@ export default function KeywordsFilter({onUpdateSelectedKeywords, selectedKeywor
       return mappedItem;
     });
 
-    // Sortiranje stavki po atributu count od najveće do najmanje vrednosti
     return mappedItems.sort((a, b) => b.count - a.count);
   };
 
@@ -98,7 +91,7 @@ export default function KeywordsFilter({onUpdateSelectedKeywords, selectedKeywor
     const values = [];
     
     parents.forEach(parent => {      
-      if (parent.isChecked) { // Ako nisu svi childovi selektovani, dodajemo vrednosti childova pojedinačno
+      if (parent.isChecked) {
         values.push(parent.value);
       }
     });
@@ -106,8 +99,6 @@ export default function KeywordsFilter({onUpdateSelectedKeywords, selectedKeywor
     onUpdateSelectedKeywords(values);
     setIsFilterOpen(false);
   };
-
-  /* Restartovanje stanja svih Checkboxova */
 
   const clearAll = () => {
     setParents(initialParents.map(parent => {     

@@ -14,7 +14,6 @@ export default function FileInfoFilter({onUpdateSelectedSuffixes, selectedSuffix
 
   const baseUrl = process.env.REACT_APP_MGNL_HOST_NEW; 
 
-  /* Dohvatanje Filtera */
   useEffect(() => {
     fetch(`${baseUrl}/rest/mp/v1.1/suffixes`)
       .then((response) => response.json())
@@ -28,15 +27,13 @@ export default function FileInfoFilter({onUpdateSelectedSuffixes, selectedSuffix
       });
   }, [selectedSuffixes]);
 
-  /*Mapiranje Filtera*/
-
   const mapData = (data) => {
     return data.map(item => {
       const mappedItem = {
         id: item.name,
         label: item.label,
         children: item.suffixes.map((suffix, index) => ({
-          id: index + 1, // Ovde koristimo index za ID deteta, ali možete koristiti bilo koju logiku koja vam odgovara
+          id: index + 1,
           label: suffix,
           value: suffix,
           isChecked: selectedSuffixes?.includes(suffix.toString())
@@ -46,8 +43,6 @@ export default function FileInfoFilter({onUpdateSelectedSuffixes, selectedSuffix
     });
   };
 
-
-  /* Otvaranje Filtera i Dropdowna  */
 
   const extractCheckStates = (items) => {
     return items.map(item => {
@@ -76,8 +71,6 @@ export default function FileInfoFilter({onUpdateSelectedSuffixes, selectedSuffix
       });
     });
   };
-
-  /* Hendlovanje promena stanja Checkbox-ova */
 
   const toggleParentCheckbox = (parentId) => {
     setParents((prevState) => {
@@ -111,8 +104,6 @@ export default function FileInfoFilter({onUpdateSelectedSuffixes, selectedSuffix
     });
   };  
 
-   /* Pakovanje selektovanih vrednosti u niz i zatvaranje filtera */
-
   const applySelection = () => {
     const values = [];
     parents.forEach(parent => {
@@ -126,8 +117,6 @@ export default function FileInfoFilter({onUpdateSelectedSuffixes, selectedSuffix
     onUpdateSelectedSuffixes(values);
     setIsFilterOpen(false);
   };
-
-  /* Restartovanje stanja svih Checkboxova */
 
   const clearAll = () => {
     setParents(initialParents.map(parent => {     

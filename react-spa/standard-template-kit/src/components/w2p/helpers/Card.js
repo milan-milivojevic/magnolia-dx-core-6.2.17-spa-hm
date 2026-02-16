@@ -36,10 +36,10 @@ const Card = ({ templateData, buttonProps }) => {
   var creationDate = templateData.creationDate; 
 
   title = title
-    ?.replace(/-/g, '_') // Replace dashes with underscores
-    .split('_') // Split the string by underscores into an array
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
-    .join(' '); // Join the words back together with spaces
+    ?.replace(/-/g, '_')
+    .split('_')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 
   modificationDate = moment(modificationDate).utc().format('MM/DD/YYYY');
   creationDate = moment(creationDate).utc().format('MM/DD/YYYY');
@@ -115,8 +115,8 @@ const Card = ({ templateData, buttonProps }) => {
       <div className='assetCardContent w2p'>
         <h2 className='assetTitle w2p'>{title}</h2>
         <p><span>Template ID: </span>{templateId}</p>
-        {/* <p><span>Upload Date:</span>{uploadDate}</p> */}
-        {/* <p><span>Last change: </span>{modificationDate}</p>*/}
+        
+        
       </div>
 
       {showAlert && <AlertPopup showAlert={showAlert} alertMessage={message} />}

@@ -3,8 +3,6 @@
     z-index: 999999;
 }
 
-/*Close button */
-
 .closeButtonWrapper {
     border-bottom: 1px solid #e2e8f0;
     line-height: 0;
@@ -26,8 +24,6 @@
     width: 24px;
     height: 24px;
 }
-
-/*Details Modal*/
 
 .detailsModalWrapper {
     width: calc(100% - 100px);
@@ -67,7 +63,7 @@ a.linkToW2P {
     height: 100%;
     max-width: 60%;
     position: relative;
-    width: 60%;    
+    width: 60%;
 }
 
 .assetPreview {
@@ -78,7 +74,7 @@ a.linkToW2P {
 .detailsModalOptions .assetCardPreview {
     height: 230px;
 }
-.assetVersions, .assetVariants, .relatedAssets {  
+.assetVersions, .assetVariants, .relatedAssets {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -90,36 +86,27 @@ a.linkToW2P {
 }
 
 .detailsModalOptions ::-webkit-scrollbar {
-    width: 8px;  /* width of the entire scrollbar */
+    width: 8px;
   }
-  
-  /* This styles the draggable scrolling handle */
+
   .detailsModalOptions ::-webkit-scrollbar-thumb {
-    background-color: darkgrey;  /* color of the scroll thumb */
-    border-radius: 4px;          /* roundness of the scroll thumb */
-    background-clip: content-box; /* this allows the thumb to be styled with borders or padding */
+    background-color: darkgrey;
+    border-radius: 4px;
+    background-clip: content-box;
   }
-  
-  /* This styles the buttons on the scrollbar (up and down arrows, usually not present on modern scrollbars) */
+
   .detailsModalOptions ::-webkit-scrollbar-button {
-    display: none;  /* hides them */
+    display: none;
   }
-  
-  /* Style the hover state of the scroll thumb */
+
   .detailsModalOptions ::-webkit-scrollbar-thumb:hover {
     background-color: grey;
   }
-
-/* .detailsModalOptions .assetCard {    
-    box-shadow: 0 1px 1px rgba(9,30,66,.5), 0 0 1px 1px rgba(9,30,66,.25);
-} */
 
 .detailsModal .detailsModalOptions .assetPreview {
     width: 100%;
     height: 100%;
 }
-
-
 
 .detailOptions .closeButtonWrapper {
     justify-content: space-between;
@@ -207,8 +194,6 @@ a.linkToW2P {
     background-color: white;
 }
 
-
-
 .assetImagePages button.next {
     padding: 6px 10px 6px 12px;
 }
@@ -278,8 +263,6 @@ span.pagingStatus {
     padding: 10px 15px;
     height: 36px;
 }
-
-/*Download Modal*/
 
 .downloadModalWrapper,
 .emailModalWrapper {
@@ -398,8 +381,6 @@ span.pagingStatus {
 .downloadModal .downloadButton button.enabled:hover {
     border-color: #2d3748;
 }
-
-/*Email Modal */
 
 .emailModalForm label {
     display: block;

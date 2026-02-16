@@ -3,10 +3,8 @@ import { AiOutlineClose } from "react-icons/ai";
 import Modal from 'react-modal';
 import { findInstanceId } from '../../../api/w2pSearchService';
 
-
 const CreateModal = ({ templateId, isOpen, onClose }) => {
   
-  console.log("Create Modal")
 
   const iframeRef = useRef(null);
 
@@ -15,9 +13,6 @@ const CreateModal = ({ templateId, isOpen, onClose }) => {
   const getInstanceId = async (templateId) => {
     const response = await findInstanceId(templateId);
     setInstanceId(response);
-    console.log("[searchById response]");
-    console.log(response);
-    console.log("----------------------");
   }
 
   useEffect(() => {
@@ -26,13 +21,10 @@ const CreateModal = ({ templateId, isOpen, onClose }) => {
 
   const handleIframeLoad = () => {
     if (iframeRef.current) {
-      // Access the iframe's document
       const iframeDocument = iframeRef.current.contentDocument;
 
-      // Create a new style element
       const styleElement = iframeDocument.createElement('style');
 
-      // Define your CSS styles here
       const cssStyles = `
         div#bm-header {
             display: none;
@@ -47,10 +39,8 @@ const CreateModal = ({ templateId, isOpen, onClose }) => {
         }
       `;
 
-      // Set the style element's content to your CSS styles
       styleElement.innerHTML = cssStyles;
 
-      // Append the style element to the iframe's document head
       iframeDocument.head.appendChild(styleElement);
     }
   };

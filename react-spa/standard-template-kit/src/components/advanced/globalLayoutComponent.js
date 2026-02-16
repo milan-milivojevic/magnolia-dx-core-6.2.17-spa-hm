@@ -208,7 +208,6 @@ function GlobalLayoutComponent ({
 
   const HeadlineLevel = headlineLevel || configProps?.headlineLevel || "h1";  
   const downloadLink = download ? download['@link']: baseUrl;  
-  // const downloadLink = download ? baseUrl + isPublic ? download['@link'].replace("cmsAuthor", "cmsPublic") : download['@link'] : baseUrl;
   const externalLink = isPublic ? external?.replace("cmsAuthor", "cmsPublic") : external?.replace("cmsPublic", "cmsAuthor");
   const href = linkType === "page" ? (getRouterBasename() + page)?.replace("//", "/")?.replace("Home/Home", "Home") : linkType === "external" ? externalLink : downloadLink;
 
@@ -371,14 +370,12 @@ function GlobalLayoutComponent ({
           <div className='imageComponentWrapper flex' style={{gap: imagesGap || configProps?.imagesGap || null, justifyContent: imagesHorizontalPosition || configProps?.imagesHorizontalPosition || null}}>
             {media1Type === "image1" && image1 &&
               <div style={{width:image1Width || "auto"}}>
-                {/* <img className="image image1" src={isPublic ? image1['@link'].replace("cmsAuthor", "cmsPublic") : image1['@link']} alt="" style={image1Styles}/> */}
                 <img className="image image1" src={image1['@link']} alt="" style={image1Styles}/>
               </div>
             }
             {media1Type === "video1" && video1 &&
               <div className="video1Component" style={{width:image1Width || "auto"}}>
                 <video 
-                  // src={isPublic ? video1['@link'].replace("cmsAuthor", "cmsPublic") : video1['@link']} 
                   src={video1['@link']} 
                   style={image1Styles}
                   preload="auto"
@@ -398,7 +395,6 @@ function GlobalLayoutComponent ({
             }
             {media2Type === "image2" && image2 &&
               <div style={{width:image2Width || "auto"}}>
-                {/* <img className="image image2" src={isPublic ? image2['@link'].replace("cmsAuthor", "cmsPublic") : image2['@link']} alt="" style={image2Styles}/> */}
                 <img className="image image2" src={image2['@link']} alt="" style={image2Styles}/>
               </div>
             }
@@ -406,7 +402,6 @@ function GlobalLayoutComponent ({
               <div className="video2Component" style={{width:image2Width || "auto"}}>
                 <video 
                   src={video2['@link']} 
-                  // src={isPublic ? video2['@link'].replace("cmsAuthor", "cmsPublic") : video2['@link']} 
                   style={image2Styles}
                   preload="auto"
                   autoPlay={autoplay2 === (false || "false") ? null : "autoplay"}
@@ -451,14 +446,12 @@ function GlobalLayoutComponent ({
           <div className='imageComponentWrapper flex' style={{gap: imagesGap || configProps?.imagesGap || null, justifyContent: imagesHorizontalPosition || configProps?.imagesHorizontalPosition || null}}>
             {media1Type === "image1" && image1 &&
               <div style={{width:image1Width || "auto"}}>
-                {/* <img className="image image1" src={isPublic ? image1['@link'].replace("cmsAuthor", "cmsPublic") : image1['@link']} alt="" style={image1Styles}/> */}
                 <img className="image image1" src={image1['@link']} alt="" style={image1Styles}/>
               </div>
             }
             {media1Type === "video1" && video1 &&
               <div className="video1Component" style={{width:image1Width || "auto"}}>
                 <video 
-                  // src={isPublic ? video1['@link'].replace("cmsAuthor", "cmsPublic") : video1['@link']} 
                   src={video1['@link']} 
                   style={image1Styles}
                   preload="auto"
@@ -478,7 +471,6 @@ function GlobalLayoutComponent ({
             }
             {media2Type === "image2" && image2 &&
               <div style={{width:image2Width || "auto"}}>
-                {/* <img className="image image2" src={isPublic ? image2['@link'].replace("cmsAuthor", "cmsPublic") : image2['@link']} alt="" style={image2Styles}/> */}
                 <img className="image image2" src={image2['@link']} alt="" style={image2Styles}/>
               </div>
             }
@@ -486,7 +478,6 @@ function GlobalLayoutComponent ({
               <div className="video2Component" style={{width:image2Width || "auto"}}>
                 <video 
                   src={video2['@link']} 
-                  // src={isPublic ? video2['@link'].replace("cmsAuthor", "cmsPublic") : video2['@link']} 
                   style={image2Styles}
                   preload="auto"
                   autoPlay={autoplay2 === (false || "false") ? null : "autoplay"}

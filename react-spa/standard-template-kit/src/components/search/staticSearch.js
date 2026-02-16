@@ -17,7 +17,6 @@ function StaticSearch ({globalQuery}) {
   const [showModal, setShowModal] = useState(false); 
 
   useEffect(() => {
-    console.log(globalQuery);
     if (globalQuery !== null && globalQuery !== undefined)  {
       setQuery(globalQuery);
       setTempQuery(globalQuery);
@@ -62,8 +61,6 @@ function StaticSearch ({globalQuery}) {
       return current["@id"] === item["@id"];
     });
   });    
-  console.log("dataArr");
-  (dataArr && dataArr.length>0) && console.log(dataArr);
 
   function highlightText(htmlString, searchTerm) {
     if (!htmlString || !searchTerm) {
@@ -74,7 +71,7 @@ function StaticSearch ({globalQuery}) {
     const doc = parser.parseFromString(htmlString, 'text/html');
     
     function highlightTextNode(node) {
-      if (node.nodeType === 3) { // TEXT_NODE
+      if (node.nodeType === 3) {
         const matches = [...node.textContent.matchAll(new RegExp(`(${searchTerm})`, 'gi'))];
         if (matches.length > 0) {
           const spanWrapper = document.createElement('span');
@@ -101,8 +98,6 @@ function StaticSearch ({globalQuery}) {
   
 
   const orderedData = dataArr.map(orderData);
-  console.log("orderedData");
-  console.log(orderedData);
 
   function orderData(data) {
     const mainSectionIndex = data["@path"].indexOf("/mainSection");
@@ -158,8 +153,6 @@ function StaticSearch ({globalQuery}) {
   }
 
   const filteredData = orderedData.filter(url => !url.path.includes("/Config-Pages/") && !url.path.includes("/Components-Library/"));
-  console.log("filteredData");
-  console.log(filteredData);
 
 
   const resultArr = [];
