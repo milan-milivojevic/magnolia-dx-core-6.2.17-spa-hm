@@ -169,8 +169,6 @@ function ImageTeaser ({
       const getDimensions = () => ({
         width: myRefCurrent.offsetWidth,
         height: myRefCurrent.offsetHeight,
-        // headlineHeight: myRefCurrent.offsetHeight,
-        // descLinkHeight: myRefCurrent.offsetHeight,
       })  
       const handleResize = () => {
         setDimensions(getDimensions())
