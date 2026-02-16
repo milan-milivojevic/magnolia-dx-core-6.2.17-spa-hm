@@ -9,8 +9,6 @@ import { FixedSizeList } from 'react-window';
 import tagsPayload from './payloads/tagsPayload.json';
 
 export default function TagsFilter({ onUpdateSelectedTags, selectedTags }) {
-  console.log("selectedTags");
-  console.log(selectedTags);
 
   const [parents, setParents] = useState([]);
   const [initialParents, setInitialParents] = useState([]);
@@ -53,18 +51,6 @@ export default function TagsFilter({ onUpdateSelectedTags, selectedTags }) {
       return mappedItems;
     };
   }, []);
-
-  // const mapData = (data) => {
-  //   const mappedItems = data.map(item => {
-  //     let mappedItem = {
-  //       id: item.group,
-  //       isChecked: selectedTags?.includes(item.id) // Check if the ID exists in the selectedKeywords
-  //     };
-  
-  //     return mappedItem;
-  //   });
-  //   return mappedItems;
-  // };
 
   const toggleFilter = () => {
     if (!isFilterOpen) {
@@ -117,8 +103,6 @@ export default function TagsFilter({ onUpdateSelectedTags, selectedTags }) {
   };
 
   const filteredParents = parents?.filter(parent => parent.id.toLowerCase().includes(filterValue.toLowerCase()));
-  console.log("filteredParents");
-  console.log(filteredParents);
 
   return (
     <div className="searchFilter keywords tags">
