@@ -1,16 +1,12 @@
 header {
-  display: flex;  
+  display: flex;
   justify-content: center;
   height: 125px;
   position: fixed;
   width: 100%;
   z-index: 99999;
   padding: 30px 90px;
-  /* -ms-box-shadow: 15px 5px 30px 1px rgba(0, 0, 0, 0.31);
-  -o-box-shadow: 15px 5px 30px 1px rgba(0, 0, 0, 0.31);
-  -webkit-box-shadow: 15px 5px 30px 1px rgba(0, 0, 0, 0.31);
-  -moz-box-shadow: 15px 5px 30px 1px rgba(0, 0, 0, 0.31);
-  box-shadow: 15px 5px 30px 1px rgba(0, 0, 0, 0.31);   */
+
 }
 
 .editMode header {
@@ -39,21 +35,19 @@ header .logo a {
 
 .rightHeader {
   display: flex;
-  align-items: center;  
+  align-items: center;
   gap: 25px;
 }
 
 .rightHeader .userLinks {
-  display: flex;  
+  display: flex;
   gap: 20px;
 }
 
 .rightHeader .userLinks a {
-  display: flex;  
+  display: flex;
   text-decoration: none;
 }
-
-
 
 .rightHeader .headerSearch {
   align-self: center;
@@ -106,9 +100,9 @@ input.searchInput:focus {
   display: flex;
   align-items: center;
   width: 100%;
-  z-index: 99999;      
-  background-color: #ffffff; 
-  top: 115px; 
+  z-index: 99999;
+  background-color: #ffffff;
+  top: 115px;
 }
 
 .editMode .topNav {
@@ -127,7 +121,6 @@ input.searchInput:focus {
   margin: 0 90px;
 }
 
-/* Cheat */
 .menu-item.level-0 > button a {
   font-weight: 700;
 }
@@ -165,7 +158,6 @@ input.searchInput:focus {
   background-color: rgb(255, 255, 255);
   padding: 50px 90px;
 }
-
 
 .mpSearchPage,
 .w2pSearchPage {
@@ -210,7 +202,7 @@ footer .links > div {
   flex-direction: column;
 }
 
-footer .links a {  
+footer .links a {
   font-family: 'TitilliumWebLight';
   color: #ffffff;
   font-size: 12px;
@@ -224,17 +216,9 @@ footer .links .heading {
   padding-bottom: 20px;
 }
 
-
-/* Mozila Firefox Fixes */
 h1 {
   display: flex;
 }
-
-
-/* .description * {
-  color: inherit;
-} */
-
 
 .leftNavPage {
   width: 1300px;
@@ -262,89 +246,6 @@ h1 {
 .leftHandNav .menu-item.level-0 > button {
   display: none;
 }
-
-
-/* Bitzet custom li markers */
-
-/* .description li {
-  margin-left: 18px;
-}
-
-.description ul li {
-  list-style-type: "// ";
-} */
-
-
-/* Responsive Global */
-/* @media only screen and (max-width: 1440px) {
-
-  .bannerSection .headline {
-    padding-left: 90px !important;
-    font-size: 40px !important;
-    line-height: 40px !important;
-  }
-  .bannerSection .span {
-    height: 35px !important;
-  }
-
-  .bannerSection .description {
-    padding-left: 90px !important;
-    padding-bottom: 50px !important;
-    width: 62% !important;
-  }
-
-  .bannerSection .imageTeaserComponent {
-    height: 500px !important;
-  }
-
-  .bannerSection .imageTeaser {
-    height: 500px !important;
-  }
-
-  .mainSection {padding-left: 90px !important;padding-right: 170px !important;}
-
-  
-
-  .rightHeader {
-    padding-bottom: 12px !important;
-  }
-
-  .rightHeader .settings {
-    height: 20px !important;
-  }
-
-  .rightHeader svg {
-    height: 20px !important;
-    width: 20px !important;
-  }
-
-  .rightHeader .faqPage a {
-    font-size: 18px !important;
-    line-height: 20px !important;
-  }
-
-  
-
- 
-
-  .level-0 > button > a {
-    padding-bottom: 24px !important;
-    font-size: 18px !important;
-    line-height: 18px !important;
-  }
-
- 
-
-  .leftNavPage .leftHandNav {
-    height: calc(100vh - 148px) !important;
-  }
-  
-  .leftNavPage .leftHandNav, .pageContainer {
-    min-height: calc(100vh - 148px) !important;
-    top: 148px !important;
-  }
-
-} */
 
 body {
   color: #414141;
