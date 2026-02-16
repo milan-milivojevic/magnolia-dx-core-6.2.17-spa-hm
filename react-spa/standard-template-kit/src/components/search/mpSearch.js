@@ -69,9 +69,6 @@ function MpSearch ({
     let searchParams = new URLSearchParams(window.location.search);
     const encryptedData = searchParams.get('data');
     
-    console.log("encryptedData");
-    console.log(encryptedData);
-
     let decryptedData = undefined;
     if (encryptedData) {
       decryptedData = decryptData(encryptedData);
@@ -96,8 +93,6 @@ function MpSearch ({
 
     const categoriesString = searchParams.get('selectedCategories') || null;
     if (categoriesString) {
-      console.log("categoriesString");
-      console.log(categoriesString);
       categoriesArray = categoriesString.split(',');
       setSelectedCategories(categoriesArray);
     }
@@ -152,7 +147,6 @@ function MpSearch ({
     });
   }, [selectedCategories, selectedSuffixes, selectedTags, selectedVdbs]);
 
-  // Function to update selectedCategories state
   const updateSelectedCategories = (selectedValues) => {
     setSelectedCategories(selectedValues);
   };
@@ -278,7 +272,6 @@ function MpSearch ({
         <div className="searchFilters">
           <CategoriesFilter onUpdateSelectedCategories={updateSelectedCategories} selectedCategories={selectedCategories}/>
           <FileInfoFilter onUpdateSelectedSuffixes={updateSelectedSuffixes} selectedSuffixes={selectedSuffixes}/>
-          {/* <VdbFilter onUpdateSelectedVdbs={updateSelectedVdbs} selectedVdbs={selectedVdbs}/> */}
           <TagsFilter onUpdateSelectedTags={updateSelectedTags} selectedTags={selectedTags}/>
         </div>
       </div>      
