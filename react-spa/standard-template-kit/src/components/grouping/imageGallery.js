@@ -68,7 +68,6 @@ function ImageGallery ({
 
   if (layout === "Custom") {   
     gridTemplateColumns = `${col1width || ''} ${col2width || ''} ${col3width || ''} ${col4width || ''} ${col5width || ''} ${col6width || ''}`
-    console.log(gridTemplateColumns);
   }
 
   const imageGalleryComponentStyles = {

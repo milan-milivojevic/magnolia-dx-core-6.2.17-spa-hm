@@ -8,7 +8,6 @@ function Tab ({
 }) {
 
   const list = [...accordionListProps];
-  console.log(list);
   const [open, setOpen] = useState(false);
 
   const toggle = () => {
